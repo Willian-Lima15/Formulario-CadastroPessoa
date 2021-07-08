@@ -3,6 +3,10 @@ import { CadPessoa } from '../Models/CadPessoa.models';
 import { FormGroup, FormControl } from '@angular/forms';
 import { TipoCadastro } from '../Models/TipoCadastro';
 import { TipoCadastroServices } from '../Services/TipoCadastroServices';
+import { FamiliaServices } from '../Services/FamiliaServices';
+import { Familia } from '../Models/Familia';
+import { UFServices } from '../Services/UFServices';
+import { UF } from '../Models/UF';
 
 @Component({
   selector: 'app-cad-pessoa',
@@ -12,11 +16,16 @@ import { TipoCadastroServices } from '../Services/TipoCadastroServices';
 export class CadPessoaComponent implements OnInit {
   formCadPessoa: FormGroup;
 
+
   constructor(
-    private TipoCadastroServices: TipoCadastroServices
+    private TipoCadastroServices: TipoCadastroServices,
+    private FamiliaServices: FamiliaServices,
+    private UFServices: UFServices
   ) { }
 
   public tipoCad: TipoCadastro[];
+  public tipoFamilia: Familia[];
+  public tipoUF: UF[];
 
   ngOnInit() {
     this.TipoCadastroServices.getAllTipoCadastro().subscribe(
@@ -25,6 +34,21 @@ export class CadPessoaComponent implements OnInit {
         console.log(tiposCad)
       }
     )
+
+    this.FamiliaServices.getAllFamilia().subscribe(
+      tiposFamilia => {
+        this.tipoFamilia = tiposFamilia
+        console.log(tiposFamilia)
+      }
+    )
+
+    this.UFServices.getAllUF().subscribe(
+      tiposUF => {
+        this.tipoUF = tiposUF
+        console.log(tiposUF)
+      }
+    )
+
     this.createForm(new CadPessoa());
   }
   createForm(cadpessoa: CadPessoa) {

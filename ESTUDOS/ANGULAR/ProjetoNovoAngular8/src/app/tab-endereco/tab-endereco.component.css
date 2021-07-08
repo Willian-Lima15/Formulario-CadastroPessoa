@@ -21,8 +21,12 @@
     margin-left: 0.5rem;
 }
 
-h5 {
-    text-align: center;
-    background: rgb(3, 80, 223);
-    color: white;
+.botao button {
+    margin: 0.3rem;
+    padding: 5px 25px;
+}
+
+.combo-box ul {
+    background-color: darkgray;
+    padding: 200px 100px;
 }

@@ -1,29 +1,26 @@
 export class CadPessoa {
-    constructor(
-        public id: number = 1,
-        public tipoPessoa: number = 1,
-        public familia: number = 1,
-        public cpf: string = '',
-        public rg: number = 1,
-        public sexo: number = 1,
-        public nome: string = '',
-        public apelido: string = '',
-        public data: Date = null,
-        public endereço: string = '',
-        public numero: number = 1,
-        public pontoRef: string = '',
-        public bairro: string = '',
-        public cep: number = 1,
-        public uf: number = 1,
-        public cidade: string = '',
-        public residente: number = 1,
-        public comercial: number = 1,
-        public celular1: number = 1,
-        public celular2: number = 1,
-        public vendedor: number = 1,
-        public crediario: number = 1,
-        public limiteCred: number = 1,
-        public obeservacao: string = '',
-
-    ) { }
+    id: number;
+    tipoPessoa: number = 1;
+    familia: number = 1;
+    cpf: string;
+    rg: number;
+    sexo: number = 1;
+    nome: string;
+    apelido: string;
+    data: Date;
+    endereço: string;
+    numero: number;
+    pontoRef: string;
+    bairro: string;
+    cep: number;
+    uf: number = 1;
+    cidade: string;
+    residente: number;
+    comercial: number
+    celular1: number;
+    celular2: number;
+    vendedor: number = 1;
+    crediario: number = 1;
+    limiteCred: number;
+    obeservacao: string;
 }

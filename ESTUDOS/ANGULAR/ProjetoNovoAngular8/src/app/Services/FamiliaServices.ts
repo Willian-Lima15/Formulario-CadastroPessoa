@@ -1,13 +1,13 @@
 import { Injectable, Inject } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { TipoCadastro } from "../Models/TipoCadastro";
+import { Familia } from "../Models/Familia";
 
 @Injectable({
     providedIn: "root",
 })
-export class TipoCadastroServices {
-    private readonly uri = "http://localhost:3001/api/TipoCadastro"
+export class FamiliaServices {
+    private readonly uri = "http://localhost:3001/api/Familia"
     get headers(): HttpHeaders {
         return new HttpHeaders().set('content-type', 'application/json',);
     }
@@ -15,7 +15,7 @@ export class TipoCadastroServices {
         private http: HttpClient
     ) { }
 
-    public getAllTipoCadastro(): Observable<TipoCadastro[]> {
-        return this.http.get<TipoCadastro[]>(this.uri)
+    public getAllFamilia(): Observable<Familia[]> {
+        return this.http.get<Familia[]>(this.uri)
     }
 }
