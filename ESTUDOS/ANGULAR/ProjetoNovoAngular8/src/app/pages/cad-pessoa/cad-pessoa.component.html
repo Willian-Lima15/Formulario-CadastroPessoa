@@ -20,10 +20,10 @@
                 <a href="#" class="nav-link active">Dados do cliente</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link">Endereço</a>
+                <a routerLink="/tab-endereco" class="nav-link">Endereço</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link">E-mail</a>
+                <a routerLink="/tab-email" class="nav-link">E-mail</a>
             </li>
         </ul>
     </nav>
@@ -33,13 +33,13 @@
         <h5>Dados do cliente</h5>
 
         <form action="" [formGroup]="formCadPessoa">
-            <div class="row">
+            <div class="row" aria-disabled="true">
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-6 mt-1">
+                        <div class="col-6 mt-2">
                             <div class="row">
                                 <div class="col-4">
-                                    <label for="tipo" class="col-form-label">Tipo Cadastro</label>
+                                    <label for="tipo" class="col-form-label">TipoCadastro</label>
                                 </div>
                                 <div class="col-8">
                                     <select type="text" id="tipo" class="form-select form-select-sm"
@@ -50,6 +50,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-6"></div>
 
                         <div class="col-6 mt-2">
@@ -66,7 +67,10 @@
                             </div>
                         </div>
                         <div class="col-1 mt-2">
-                            <button class="btn btn-outline-dark form-control form-control-sm btn-sm">+</button>
+                            <button class="btn btn-outline-dark form-control form-control-sm btn-sm" data-toggle="modal"
+                                data-target="#exampleModal">
+                                +
+                            </button>
                         </div>
                         <div class="col-5"></div>
 
@@ -210,7 +214,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 mt-2">
+                        <div class="col-12 mt-1">
                             <div class="row">
                                 <div class="col-2">
                                     <label for="" class="col-form-label-sm">Cidade</label>
@@ -322,7 +326,7 @@
                                 <label for="" class="col-form-label 
                                 ">Observação</label>
                             </div>
-                            <div class="col-8">
+                            <div class="col-8 mb-1">
                                 <textarea class="form-control" name="" id="" cols="10" rows="4"
                                     formControlName="observacao">
 
@@ -333,5 +337,22 @@
                 </div>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DIGITE O NOVO FAMILIA/GRUPO</h5>
+            </div>
+            <div class="modal-footer col-12">
+                <input type="text" class="form-control form-control-sm col-8">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
     </div>
 </div>

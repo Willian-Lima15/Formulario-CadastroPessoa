@@ -1,0 +1,166 @@
+<div class="container">
+
+    <div class="botoes">
+        <button type="submit" class="btn btn-outline-secondary">
+            <img src="assets/sair.png" alt="cancelar">
+            Cancelar
+        </button>
+        <button type="button" class="btn btn-outline-success">
+            <img src="assets/salvar.png" alt="gravar">
+            Gravar
+        </button>
+        <button type="button" class="btn btn-outline-danger">
+            <img src="assets/cancelar.svg" alt="sair">
+            Sair</button>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a routerLink="/cad-pessoa" class="nav-link">Dados do cliente</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active">Endereço</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/tab-email" class="nav-link">E-mail</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="section">
+        <div class="row">
+            <div class="col-12 botao">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar</button>
+                <button class="btn btn-danger">Excluir</button>
+                <button class="btn btn-warning">Alterar</button>
+            </div>
+        </div>
+
+        <div class="combo-box">
+            <ul class="col-12">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel">Adição de Endereço</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container-fluid modal-body">
+                <div class="row">
+
+                    <div class="col-12 mt-2">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="familia" class="col-form-label">Familia</label>
+                            </div>
+                            <div class="col-6">
+                                <select type="text" id="familia" class="form-select form-select-sm"
+                                    formControlName="familia" readonly>
+                                    <option value="1" *ngFor="let tipFamilia of tipoFamilia">{{tipFamilia.Nome}}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mt-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="" class="col-form-label">Endereço</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control form-control-sm" formControlName="Endereco">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 mt-2">
+                        <div class="row text-end">
+                            <div class="col-2">
+                                <label for="" class="col-form-label-sm">Nº</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="number" class="form-control form-control-sm" formControlName="numero">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-2">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="" class="col-form-label-sm">Ponto Ref.</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control form-control-sm" formControlName="pontoRef">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-2">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="" class="col-form-label-sm">Bairro</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control form-control-sm" formControlName="bairro">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="" class="col-form-label">CEP</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control form-control-sm" formControlName="cep"
+                                    mask="00000-0000" [showMaskTyped]="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-2">
+                        <div class="row text-end">
+                            <div class="col-6">
+                                <label for="" class="col-form-label-sm">UF</label>
+                            </div>
+                            <div class="col-6">
+                                <select name="" id="" class="form-select form-select-sm" formControlName="uf">
+                                    <option value="1" *ngFor="let tipUF of tipoUF">{{tipUF.Nome}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-1">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="" class="col-form-label-sm">Cidade</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control form-control-sm" formControlName="cidade">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                        <button type="button" class="btn btn-secondary">Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

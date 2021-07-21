@@ -30,3 +30,8 @@
     background-color: darkgray;
     padding: 200px 100px;
 }
+
+legend {
+    border:1px solid #dee2e6;
+    border-radius: 0.5rem;
+}

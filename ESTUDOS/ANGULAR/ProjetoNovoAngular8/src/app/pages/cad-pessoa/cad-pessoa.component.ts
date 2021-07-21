@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CadPessoa } from '../Models/CadPessoa.models';
+import { CadPessoa } from 'src/app/Models/CadPessoa.models';
 import { FormGroup, FormControl } from '@angular/forms';
-import { TipoCadastro } from '../Models/TipoCadastro';
-import { TipoCadastroServices } from '../Services/TipoCadastroServices';
-import { FamiliaServices } from '../Services/FamiliaServices';
-import { Familia } from '../Models/Familia';
-import { UFServices } from '../Services/UFServices';
-import { UF } from '../Models/UF';
+import { TipoCadastro } from 'src/app/Models/TipoCadastro';
+import { TipoCadastroServices } from 'src/app/Services/TipoCadastroServices';
+import { FamiliaServices } from 'src/app/Services/FamiliaServices';
+import { Familia } from 'src/app/Models/Familia';
+import { UFServices } from 'src/app/Services/UFServices';
+import { UF } from 'src/app/Models/UF';
 
 @Component({
   selector: 'app-cad-pessoa',

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CadPessoaComponent } from './cad-pessoa.component';
+import { TabEnderecoComponent } from './tab-endereco.component';
 
-describe('CadPessoaComponent', () => {
-  let component: CadPessoaComponent;
-  let fixture: ComponentFixture<CadPessoaComponent>;
+describe('TabEnderecoComponent', () => {
+  let component: TabEnderecoComponent;
+  let fixture: ComponentFixture<TabEnderecoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CadPessoaComponent ]
+      declarations: [TabEnderecoComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CadPessoaComponent);
+    fixture = TestBed.createComponent(TabEnderecoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
