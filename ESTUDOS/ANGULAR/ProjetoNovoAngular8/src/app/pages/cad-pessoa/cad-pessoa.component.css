@@ -23,6 +23,8 @@
 
 .section h5 {
     text-align: center;
-    background: rgb(3, 80, 223);
+    margin-top: 2px;
+    border-radius: 3px;
+    background-color:indigo;
     color: white;
 }
